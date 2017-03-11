@@ -1,0 +1,101 @@
+
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="c3.min.css">
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+ 	<script src="https://d3js.org/d3.v3.js"></script>
+	<script type="text/javascript" src="c3.min.js"></script>
+	
+</head>
+<body>
+
+	<h1>Hello folks!</h1>
+	<div id="chart"></div>
+	<script type="text/javascript">
+		
+
+		texto = prompt("Please enter your text", "Harry Potter Harry Potter Harry Potter Potter");
+		texto2 = prompt("Please enter your text", "Harry Potter Potter Harry Potter Potter");
+
+		criaDicionarios = function(texto, p) {
+			texto = texto.replace(/[\n—.,\/#!$%\^&\*;:{}=\-_`~()]/g, " ").toLowerCase()
+			texto = texto.split(" ")
+			dicionario = {}
+			for (l in texto) {
+				dicionario[texto[l]] = dicionario[texto[l]] || 0;
+				dicionario[texto[l]] += 1
+			}
+			ordenado = [];
+			for (item in dicionario) {
+				ordenado.push([item, dicionario[item]])
+			}
+			ordenado.sort(function(a,b) {
+				return b[1] - a[1];
+			});
+			eixoy = ["frequencia"+p];
+			eixox = ["ranking"+p];
+			palavras = ["palavras"]
+			for (indice in ordenado) {
+				eixoy.push(Math.log(ordenado[indice][1]))
+				eixox.push(Math.log(Number(indice) + 1))
+				palavras.push(ordenado[indice][0])
+			}
+			resultado = {
+				'eixox' : eixox,
+				'eixoy' : eixoy,
+				'palavras' : palavras
+ 			}
+ 			return resultado
+		}
+		
+
+		livros = []
+		livros[0] = criaDicionarios(texto, '_1')
+		livros[1] = criaDicionarios(texto2, '_2')
+
+		xizes = {}
+		colunas = []
+
+		for (livro in livros) {
+			xizes[livros[livro]['eixoy'][0]] = livros[livro]['eixox'][0]
+
+			colunas.push(livros[livro]['eixox'])
+			colunas.push(livros[livro]['eixoy'])
+		}
+
+	// -------------------------------
+
+		var chart = c3.generate({
+		    data: {
+		        xs: xizes,
+		        // iris data from R
+		        columns: colunas,
+		        type: 'scatter'
+		    },
+		    axis: {
+		        x: {
+		            label: 'Sepal.Width',
+		            tick: {
+		                fit: false
+		            }
+		        },
+		        y: {
+		            label: 'Petal.Width'
+		        }
+		    }
+		    // tooltip: {
+		    // 	format: {
+		    // 		title: function(x){
+		    // 		return palavras[eixox.indexOf(x)]
+		    // 		}
+		    // 	}
+		    // }
+		});
+	</script>
+</body>
+</html>

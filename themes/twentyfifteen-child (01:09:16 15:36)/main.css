@@ -1,0 +1,544 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+body::before {
+  display: none;
+}
+
+body  {
+  font-family: Georgia, Times;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4c4e4d;
+  background-color: #ededed;
+  margin-top: 50px;
+}
+p {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 0 15px;
+}
+
+a   {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}  
+
+hr {
+  border-top: 1px solid #2e6da4;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Fjalla One', sans-serif;,'Helvetica Neue', Helvetica, Arial;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+
+}
+
+button:hover {
+  background: white;
+
+}
+
+p.lead  {
+  color: inherit;
+}
+
+/*HELPER CLASSES*/
+
+.progress {
+  height: 5px;
+}
+
+.progress-bar-info  {
+  background-color: #5C7AA5; 
+}
+
+.height-zero  {
+  height: 0;
+}
+.transparent {
+  opacity: 0;
+}
+
+.highlight {
+  background-color: #FFF646;
+  color: black;
+  font-style: italic;
+}
+
+/*NAVIGATION*/
+
+.navbar-default   {
+  background: #ededed;
+  box-shadow: none;
+  border-bottom: 2px solid #dedede;
+}
+
+.navbar-brand h3  {
+  margin: 2px 0 0 0;
+  font-size: 16px;
+  color: #5C7AA5;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+  background: #fff;
+}
+
+
+#content  {
+}
+
+.quemsou {
+  background-image: url('uyuni.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.quemsou h1 {
+  color: #252525;
+  margin-top: 250px;
+  margin-bottom: 0px;
+  padding-left: 42%;
+}
+.quemsou h3 {
+  margin-top: -5px;
+  padding-left: 42%;
+}
+.quemsou .lead {
+  color: #252525;
+  padding-left: 42%;
+  margin-bottom: 66px;
+}
+
+#skills {
+  transition: 1s;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  border-top: 2px solid #5C7AA5;
+  padding-bottom: 30px;
+}
+
+.fa-pencil,
+.fa-code,
+.fa-film  {
+  font-size: 46px;
+  text-align: center;
+  margin: 60px auto;
+  display: block;
+  transition: 0.5s;
+}
+
+.fa-pencil:hover ,
+.fa-code:hover ,
+.fa-film:hover  {
+  font-size: 64px;
+  margin-top: 42px;
+}
+.fa  {
+  color: #5C7AA5;
+}
+.fa:hover {
+}
+.fa-th:hover,
+.fa-pencil:hover ,
+.fa-code:hover ,
+.fa-film:hover   {
+  cursor: pointer;
+  color: #2A4F85;
+}
+
+#folio {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-top: 40px;
+  border-top: 2px solid #5C7AA5;
+}
+
+#folio p.lead{
+  margin-bottom: 66px;
+}
+
+.post-home {
+  background-size: cover;
+  background-position: center;
+  height: 270px;
+  margin-bottom: 30px;
+}
+
+.post-home .shade   {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 45, 63, 0.86);
+  padding: 15px;
+  transition: 0.5s;
+}
+
+.post-home .shade:hover   {
+  background-color: rgba(0,0,0,0.25);
+}
+
+.post-home .shade div   {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #FFF646;
+  padding: 0px 15px;
+}
+
+.post-home .shade div h3  {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.post-home .shade div h3 span {
+  background: rgba(0,0,0,0.3);
+  color: white;
+}
+.post-home .shade:hover div h3 span {
+  background-color: #FFF646;
+  color: black;
+}
+
+.post-home p {
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.post-home a:hover {
+  color: #FFF646;
+}
+.post-home:hover p {
+  background: rgba(0,0,0,0.8);
+  color: white;
+  opacity: 1;
+}
+
+#cv {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-top: 40px;
+  border-top: 2px solid #5C7AA5;
+}
+
+#cv h1  {
+  text-align: center;
+  margin-bottom: 46px;
+}
+#cv li {
+  list-style: none;
+}
+#cv li::before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    margin-top: 3px;
+    width: 6px;
+    height: 12px;
+    background: #FFF646;
+}
+
+#cv li.noliststyle::before {
+    display: none;
+}
+
+#experiencias   {
+ transition: 1s;
+}
+#idiomas   {
+ transition: 2s;
+}
+#formacao   {
+ transition: 3s;
+}
+#premios   {
+ transition: 5s;
+}
+#habilidades   {
+ transition: 8s;
+}
+
+
+
+
+#the-post img   {
+  padding: 15px;
+}
+
+.showcase   {
+  padding: 30px;
+}
+
+
+.left-50  {
+  width: 49%;
+  float: left;
+}
+.right-50  {
+  width: 49%;
+  float: right;
+}
+
+.trio   {
+  width: 33.33333333%;
+  float: left;
+}
+
+
+.post-navigation {
+    width: 100%;
+    float: left;
+    margin: 30px 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*CONTATO*/
+
+#footer  {
+  background-color: #5C7AA5;
+  color: white;
+  padding: 120px 0;
+}
+
+#contato input {
+  color: #5C7AA5;
+}
+
+#contato  {
+  text-align: center;
+}
+
+#contato h1 {
+  color: white;
+}
+
+
+
+/*NAVIGATION*/
+
+#postnav {
+  transition: 0.3s;
+}
+
+#postnav a {
+  position: fixed;
+  top: 50%;
+  display: block;
+  outline: none;
+  text-align: left;
+  z-index: 1000;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#postnav a.prev {
+  left: 0;
+}
+
+#postnav a.next {
+  right: 0;
+}
+
+#postnav a svg {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+/*--------------------*/
+/* Double flip */
+/*--------------------*/
+
+.nav-doubleflip a {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.nav-doubleflip a.prev {
+  -webkit-perspective-origin: 100% 50%;
+  perspective-origin: 100% 50%;
+}
+
+.nav-doubleflip a.next {
+  -webkit-perspective-origin: 0% 50%;
+  perspective-origin: 0% 50%;
+}
+
+.nav-doubleflip .icon-wrap {
+  position: relative;
+  z-index: 100;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #5C7AA5;
+  -webkit-transition: background-color 0.3s 0.3s;
+  transition: background-color 0.3s 0.3s;
+}
+
+.nav-doubleflip svg.icon {
+  position: relative;
+  top: 50%;
+  -webkit-transition: fill 0.3s 0.3s;
+  transition: fill 0.3s 0.3s;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  fill: #fff;
+}
+
+.nav-doubleflip div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.nav-doubleflip a.prev div,
+.nav-doubleflip a.prev p {
+  left: 100%;
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+.nav-doubleflip a.next div,
+.nav-doubleflip a.next p {
+  right: 100%;
+  -webkit-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+.nav-doubleflip img,
+.nav-doubleflip p {
+  position: absolute;
+  top: 0;
+  width: 200%;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.nav-doubleflip p {
+  margin: 0;
+  padding: 15px;
+  background-color: #5C7AA5;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.nav-doubleflip a:hover .icon-wrap {
+  background-color: #fff;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+.icon-wrap .fa   {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transition: fill 0.3s 0.3s;
+    transition: fill 0.3s 0.3s;
+    font-size: 64px;
+    z-index: 10;
+}
+
+.nav-doubleflip a:hover .icon-wrap .fa {
+  color: #5C7AA5;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.nav-doubleflip a:hover div,
+.nav-doubleflip a:hover p {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.nav-doubleflip a:hover div {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.nav-doubleflip a:hover p {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+
+/*
+ * CSS Page Transitions
+ */
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.m-scene .scene_element {
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+
+  }
+
+
+  /** An element that fades in and slides from the right */
+ .m-scene .scene_element--fadeinright {
+    animation-name: fadeInRight;
+  }
+
+ .m-scene.is-exiting .scene_element {
+        animation-direction: alternate-reverse;
+ }

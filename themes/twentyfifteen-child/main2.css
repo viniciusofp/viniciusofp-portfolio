@@ -1,0 +1,669 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,500,900);
+
+body::before {
+  display: none;
+}
+
+body  {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4c4e4d;
+  background-color: #ededed;
+  padding-top: 50px;
+  font-weight: 500;
+}
+
+@media all and (min-width: 669px) {
+  body  {
+    padding-top: 0;
+  } 
+  html {
+    margin-top: 0px !important;
+  }
+}
+p {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 0 15px;
+}
+
+.lead {
+  font-weight: 400;
+}
+
+.tooltip-inner  {
+  width: 480px;
+  font-size: 14px;
+  padding: 15px;
+}
+
+a   {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}  
+
+hr {
+  border-top: 1px solid #2e6da4;
+  width: 100%;
+}
+
+
+h1, h3  {
+  font-weight: 900;
+}
+
+h2, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+
+}
+
+button:hover {
+  background: white;
+
+}
+
+p.lead  {
+  color: inherit;
+}
+
+/*HELPER CLASSES*/
+
+.center-y   {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.progress {
+  height: 5px;
+}
+
+.progress-bar-info  {
+  background-color: #E84427; 
+}
+
+.height-zero  {
+  height: 0;
+}
+.transparent {
+  opacity: 0;
+}
+
+.highlight {
+  background-color: #9BD6FF;
+  color: black;
+  font-style: italic;
+}
+
+/*NAVIGATION*/
+
+.navbar-default   {
+  background: #ededed;
+  box-shadow: none;
+  border-bottom: 2px solid #dedede;
+}
+
+
+
+.navbar-default .navbar-nav>li>a  {
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+  background: #fff;
+
+}
+
+
+
+/*SIDE HEADER*/
+
+#side-header {
+  position: fixed;
+  background-image: url('/wp-content/themes/twentyfifteen-child/ballooomport-2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  border-right: 1px solid #9BD6FF;
+}
+
+#side-header ul {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
+    margin-left: -15px;
+}
+
+#side-header ul li {
+  display: inline;
+    background-color: rgba(255,255,255,0.1);
+    color: black;
+    margin: 15px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+#side-header ul li:hover {
+    background-color: rgba(0,0,0,0.85);
+    color: #f1f1f1;
+}
+
+/*CONTENT*/
+
+
+#content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.quemsou .col-xs-12 {
+    height: 100vh;
+}
+
+.quemsou a {
+  color: #E84427;
+}
+
+.quemsou a:hover {
+  color: #d80407;
+}
+
+.quemsou h1 {
+  font-size: 21px;
+  color: #252525;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 800;
+
+}
+.quemsou h3 {
+    font-size: 21px;
+    font-style: italic;
+  display: inline;
+  margin-top: -5px;
+}
+
+.quemsou h3 span {
+  color: #E84427;
+}
+
+.quemsou .lead {
+   font-size: 21px;
+   color: #252525;
+   display: inline;
+
+}
+
+#skills {
+  transition: 1s;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  border-top: 2px solid #E84427;
+  padding-bottom: 30px;
+}
+
+.fa-pencil,
+.fa-code,
+.fa-film  {
+  font-size: 46px;
+  text-align: center;
+  margin: 60px auto;
+  display: block;
+  transition: 0.5s;
+}
+
+.fa-pencil:hover ,
+.fa-code:hover ,
+.fa-film:hover  {
+  font-size: 64px;
+  margin-top: 42px;
+}
+.fa  {
+  color: #E84427;
+}
+.fa:hover {
+}
+.fa-th:hover,
+.fa-pencil:hover ,
+.fa-code:hover ,
+.fa-film:hover   {
+  cursor: pointer;
+  color: #2A4F85;
+}
+
+#folio {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-top: 40px;
+  border-top: 2px solid #E84427;
+}
+
+#folio p.lead{
+  margin-bottom: 66px;
+}
+
+.filterbg-wrapper {
+  position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -15px;
+    left: 0;
+    padding: 15px;
+  z-index: -1;
+  -webkit-filter: brightness(25%) grayscale(100%);
+  transition: 0.5s;
+}
+
+.post-home:hover .filterbg-wrapper  {
+  -webkit-filter: brightness(90%) grayscale(0%);
+}
+
+.filterbg   {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.post-home {
+  background-size: cover;
+  background-position: center;
+  height: 270px;
+  margin-bottom: 30px;
+}
+
+.post-home .shade   {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 25, 25, 0.25);
+  padding: 1px;
+  transition: 0.5s;
+}
+
+.post-home .shade:hover   {
+  background-color: rgba(0,0,0,0.25);
+  padding: 15px;
+}
+.post-home .shade:hover  div  {
+  border: 5px solid #fff;
+    border-radius: 5px;
+}
+
+.post-home .shade div   {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #9BD6FF;
+  padding: 0px 15px;
+}
+
+.post-home .shade div h3  {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.first-word span { font-weight:900; }
+
+.post-home .shade div h3 span {
+  background: rgba(0,0,0,0.05);
+  color: white;
+  padding: 5px;
+  transition: 0.5s;
+}
+.post-home .shade:hover div h3 span {
+  background-color: #E84427;
+  color: white;
+}
+
+.post-home p {
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  opacity: 0;
+}
+
+.post-home a:hover {
+  color: #E84427;
+}
+.post-home:hover p {
+  color: black;
+  opacity: 1;
+}
+
+#cv {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-top: 40px;
+  border-top: 2px solid #E84427;
+}
+
+#cv h1  {
+  text-align: center;
+  margin-bottom: 46px;
+}
+#cv li {
+  list-style: none;
+}
+#cv li::before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    margin-top: 3px;
+    width: 6px;
+    height: 12px;
+    background: #FF9D8C;
+}
+
+#cv li.noliststyle::before {
+    display: none;
+}
+
+#experiencias   {
+ transition: 1s;
+}
+#idiomas   {
+ transition: 2s;
+}
+#formacao   {
+ transition: 3s;
+}
+#premios   {
+ transition: 5s;
+}
+#habilidades   {
+ transition: 8s;
+}
+
+
+
+
+#the-post img   {
+  padding: 15px;
+}
+
+.showcase   {
+  padding: 30px;
+}
+
+
+.left-50  {
+  width: 49%;
+  float: left;
+}
+.right-50  {
+  width: 49%;
+  float: right;
+}
+
+.trio   {
+  width: 33.33333333%;
+  float: left;
+}
+
+
+.post-navigation {
+    width: 100%;
+    float: left;
+    margin: 30px 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*CONTATO*/
+
+#footer  {
+  background-color: #E84427;
+  color: white;
+  padding: 120px 0;
+}
+
+#contato input {
+  color: #E84427;
+}
+
+#contato  {
+  text-align: center;
+}
+
+#contato h1 {
+  color: white;
+}
+
+
+
+/*NAVIGATION*/
+
+#postnav {
+  transition: 0.3s;
+}
+
+#postnav a {
+  position: fixed;
+  top: 50%;
+  display: block;
+  outline: none;
+  text-align: left;
+  z-index: 1000;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#postnav a.prev {
+  left: 0;
+}
+
+#postnav a.next {
+  right: 0;
+}
+
+#postnav a svg {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+/*--------------------*/
+/* Double flip */
+/*--------------------*/
+
+.nav-doubleflip a {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.nav-doubleflip a.prev {
+  -webkit-perspective-origin: 100% 50%;
+  perspective-origin: 100% 50%;
+}
+
+.nav-doubleflip a.next {
+  -webkit-perspective-origin: 0% 50%;
+  perspective-origin: 0% 50%;
+}
+
+.nav-doubleflip .icon-wrap {
+  position: relative;
+  z-index: 100;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #E84427;
+  -webkit-transition: background-color 0.3s 0.3s;
+  transition: background-color 0.3s 0.3s;
+}
+
+.nav-doubleflip svg.icon {
+  position: relative;
+  top: 50%;
+  -webkit-transition: fill 0.3s 0.3s;
+  transition: fill 0.3s 0.3s;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  fill: #fff;
+}
+
+.nav-doubleflip div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.nav-doubleflip a.prev div,
+.nav-doubleflip a.prev p {
+  left: 100%;
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+.nav-doubleflip a.next div,
+.nav-doubleflip a.next p {
+  right: 100%;
+  -webkit-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+.nav-doubleflip img,
+.nav-doubleflip p {
+  position: absolute;
+  top: 0;
+  width: 200%;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.nav-doubleflip p {
+  margin: 0;
+  padding: 15px;
+  background-color: #E84427;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.nav-doubleflip a:hover .icon-wrap {
+  background-color: #fff;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+.icon-wrap .fa   {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transition: fill 0.3s 0.3s;
+    transition: fill 0.3s 0.3s;
+    font-size: 64px;
+    z-index: 10;
+}
+
+.nav-doubleflip a:hover .icon-wrap .fa {
+  color: #E84427;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.nav-doubleflip a:hover div,
+.nav-doubleflip a:hover p {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.nav-doubleflip a:hover div {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.nav-doubleflip a:hover p {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+
+/*
+ * CSS Page Transitions
+ */
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.m-scene .scene_element {
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+
+  }
+
+
+  /** An element that fades in and slides from the right */
+ .m-scene .scene_element--fadeinright {
+    animation-name: fadeInRight;
+  }
+
+ .m-scene.is-exiting .scene_element {
+        animation-direction: alternate-reverse;
+ }
+
